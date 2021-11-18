@@ -1,12 +1,18 @@
 package org.noear.solonhat.swagger2;
 
+import io.swagger.models.Swagger;
 import org.noear.snack.ONode;
 import org.noear.solon.annotation.Controller;
+import org.noear.solon.annotation.Inject;
 import org.noear.solon.annotation.Mapping;
 import org.noear.solonhat.swagger2.integration.XPluginImp;
 
 @Controller
 public class SwaggerController {
+
+    @Inject
+    Swagger swagger;
+
     @Mapping(value = "/swagger-resources", produces = "application/json")
     public String swagger_resources() {
         return new ONode().asArray().build(n -> {
@@ -23,6 +29,6 @@ public class SwaggerController {
 
     @Mapping("/v2/swagger.json")
     public String swagger_json() {
-        return ONode.stringify(XPluginImp.swagger);
+        return ONode.stringify(swagger);
     }
 }

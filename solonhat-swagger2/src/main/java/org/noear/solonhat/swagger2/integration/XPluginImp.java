@@ -22,13 +22,16 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 public class XPluginImp implements Plugin {
-    protected static Swagger swagger = new Swagger();
+    Swagger swagger;
 
     @Override
     public void start(SolonApp app) {
         if (app.source().getAnnotation(EnableSwagger2.class) == null) {
             return;
         }
+
+        //创建 swagger bean
+        swagger = Aop.getOrNew(Swagger.class);
 
         Aop.context().beanBuilderAdd(ApiModel.class, (clz, wrap, anno) -> {
             ModelImpl model = new ModelImpl();
@@ -42,8 +45,6 @@ public class XPluginImp implements Plugin {
 
             swagger.addTag(tag);
         });
-
-
 
 
         app.beanMake(SwaggerController.class);
