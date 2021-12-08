@@ -20,10 +20,11 @@
 
         <solonhat.ver>1.0</solonhat.ver>
 
-        <solon.ver>1.5.68</solon.ver>
-        <snack3.ver>3.2.0</snack3.ver>
+        <solon.ver>1.6.6</solon.ver>
+        <snack3.ver>3.2.1</snack3.ver>
 
         <swagger.ver>1.5.13</swagger.ver>
+        <smartdoc.ver>1.9.4</smartdoc.ver>
     </properties>
 
 

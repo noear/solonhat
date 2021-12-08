@@ -11,28 +11,19 @@
         <relativePath>../solonhat-parent/pom.xml</relativePath>
     </parent>
 
-    <artifactId>solonhat-smartdoc</artifactId>
-
-    <packaging>jar</packaging>
-    <description>solon smartdoc adapter</description>
+    <artifactId>solonhat-smartdoc-test</artifactId>
 
     <dependencies>
         <dependency>
-            <groupId>com.github.shalousun</groupId>
-            <artifactId>smart-doc</artifactId>
-            <version>${smartdoc.ver}</version>
-        </dependency>
-
-        <dependency>
             <groupId>org.noear</groupId>
-            <artifactId>solon</artifactId>
+            <artifactId>solon-api</artifactId>
             <version>${solon.ver}</version>
         </dependency>
 
         <dependency>
             <groupId>org.noear</groupId>
-            <artifactId>snack3</artifactId>
-            <version>${snack3.ver}</version>
+            <artifactId>solonhat-smartdoc</artifactId>
+            <scope>test</scope>
         </dependency>
 
         <dependency>
@@ -42,4 +33,21 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
+
+    <build>
+        <finalName>${project.name}</finalName>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.7.0</version>
+                <configuration>
+                    <compilerArgument>-parameters</compilerArgument>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                    <encoding>UTF-8</encoding>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>
