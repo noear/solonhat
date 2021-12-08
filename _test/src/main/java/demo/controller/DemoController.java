@@ -1,4 +1,4 @@
-package test.controller;
+package demo.controller;
 
 import io.swagger.annotations.*;
 import org.noear.solon.annotation.Controller;

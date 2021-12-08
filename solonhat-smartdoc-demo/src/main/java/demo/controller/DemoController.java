@@ -1,9 +1,9 @@
-package test.controller;
+package demo.controller;
 
 
 import org.noear.solon.annotation.*;
-import test.model.Model;
-import test.model.Msg;
+import demo.model.Model;
+import demo.model.Msg;
 
 
 import java.util.HashMap;

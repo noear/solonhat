@@ -1,4 +1,4 @@
-package test.model;
+package demo.model;
 
 import org.noear.solon.validation.annotation.NotBlank;
 import org.noear.solon.validation.annotation.NotNull;
