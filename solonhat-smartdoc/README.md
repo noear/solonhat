@@ -21,5 +21,5 @@
 
 
 ## 示例
-    https://gitee.com/mantouchong/solonhat-smartdoc-test
+    solonhat-smartdoc-demo
     
