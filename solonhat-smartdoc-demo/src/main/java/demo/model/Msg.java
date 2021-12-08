@@ -7,7 +7,7 @@ import java.io.Serializable;
 
 public class Msg implements Serializable {
     /**
-     * error code 200表示成功
+     * code 200 表示成功
      * @required
      * @since 1.0
      */
