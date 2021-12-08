@@ -17,19 +17,25 @@
 ```
 #### 2、创建测试工具类
 
-> copy src/test/java/test/Doc.java 到你的项目中的test代码目录，运行 的 Doc.generate 
-    
-## 输出
+* [Copy] src/test/java/test/Doc.java 到你的项目中的test代码目录
 
-> 生成html及css文件
+如果有需要，可以做些修改：
+```java
+//设置服务URL，用于生成请求示例
+config.setServerUrl("http://localhost:8089");
+
+//设置输出路径，默认为 src/main/resources/static/doc
+config.setOutPath(DocGlobalConstants.HTML_DOC_OUT_PATH);
+
+```
+
+* 然后，[Run] Doc.generate 
+
+#### 3、输出
+
+> 生成html及css文件到：src/main/java/resources/static/doc 目录下
 
 
-## 配置
 
-- config.setServerUrl("http://localhost:8089") 设置服务URL，用于生成请求示例
-- config.setOutPath(DocGlobalConstants.HTML_DOC_OUT_PATH); 设置输出路径，默认src/main/resources/static/doc
-
-
-## 示例
-    solonhat-smartdoc-demo
+## 具体可参考：solonhat-smartdoc-demo
     

@@ -6,14 +6,14 @@
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
     <meta http-equiv="Pragma" content="no-cache" />
     <meta http-equiv="Expires" content="0" />
-    <link rel="stylesheet" href="markdown.css?v=1638974978830"/>
+    <link rel="stylesheet" href="markdown.css?v=1638976763799"/>
     <title>测试</title>
 </head>
 <body>
 <div class="markdown-body">
     <h1>测试</h1>
 <h2>hello</h2>
-<p><strong>URL:</strong> <code>http://localhost:8089/test/hello/{username}</code></p>
+<p><strong>URL:</strong> <code>http://localhost:8089/demo/hello/{username}</code></p>
 <p><strong>Type:</strong> <code>GET</code></p>
 <p><strong>Content-Type:</strong> <code>application/x-www-form-urlencoded;charset=utf-8</code></p>
 <p><strong>Description:</strong> hello</p>
@@ -27,7 +27,7 @@
 </tbody>
 </table>
 <p><strong>Request-example:</strong></p>
-<pre><code>curl -X GET  -i http://localhost:8089/test/hello/驰.戴
+<pre><code>curl -X GET  -i http://localhost:8089/demo/hello/博超.杨
 </code></pre>
 <p><strong>Response-fields:</strong></p>
 <table>
@@ -35,7 +35,7 @@
 <tr><th>Field</th><th>Type</th><th>Description</th><th>Since</th></tr>
 </thead>
 <tbody>
-<tr><td>code</td><td>string</td><td>error code 200表示成功</td><td>1.0</td></tr>
+<tr><td>code</td><td>string</td><td>code 200 表示成功</td><td>1.0</td></tr>
 <tr><td>ok</td><td>boolean</td><td>请求是否成功true/false</td><td>-</td></tr>
 <tr><td>data</td><td>object</td><td>请求相关数据</td><td>-</td></tr>
 <tr><td>msg</td><td>string</td><td>请求结果描述，code!=200时应该返回此值</td><td>1.0</td></tr>
@@ -43,16 +43,16 @@
 </table>
 <p><strong>Response-example:</strong></p>
 <pre><code>{
-	&quot;code&quot;:&quot;77616&quot;,
+	&quot;code&quot;:&quot;19713&quot;,
 	&quot;ok&quot;:true,
 	&quot;data&quot;:{
 		&quot;waring&quot;:&quot;You may have used non-display generics.&quot;
 	},
-	&quot;msg&quot;:&quot;5btgs0&quot;
+	&quot;msg&quot;:&quot;jic0xf&quot;
 }
 </code></pre>
 <h2>addapp</h2>
-<p><strong>URL:</strong> <code>http://localhost:8089/test/add</code></p>
+<p><strong>URL:</strong> <code>http://localhost:8089/demo/add</code></p>
 <p><strong>Type:</strong> <code>POST</code></p>
 <p><strong>Content-Type:</strong> <code>application/json; charset=utf-8</code></p>
 <p><strong>Description:</strong> addapp</p>
@@ -67,11 +67,11 @@
 </tbody>
 </table>
 <p><strong>Request-example:</strong></p>
-<pre><code>curl -X POST -H 'Content-Type: application/json; charset=utf-8'  -i http://localhost:8089/test/add --data '{
+<pre><code>curl -X POST -H 'Content-Type: application/json; charset=utf-8'  -i http://localhost:8089/demo/add --data '{
 	
-	&quot;appname&quot;:&quot;驰.戴&quot;
+	&quot;appname&quot;:&quot;博超.杨&quot;
 ,
-	&quot;nick&quot;:&quot;pcydi2&quot;
+	&quot;nick&quot;:&quot;el04vy&quot;
 }'
 </code></pre>
 <p><strong>Response-fields:</strong></p>
@@ -80,7 +80,7 @@
 <tr><th>Field</th><th>Type</th><th>Description</th><th>Since</th></tr>
 </thead>
 <tbody>
-<tr><td>code</td><td>string</td><td>error code 200表示成功</td><td>1.0</td></tr>
+<tr><td>code</td><td>string</td><td>code 200 表示成功</td><td>1.0</td></tr>
 <tr><td>ok</td><td>boolean</td><td>请求是否成功true/false</td><td>-</td></tr>
 <tr><td>data</td><td>object</td><td>请求相关数据</td><td>-</td></tr>
 <tr><td>msg</td><td>string</td><td>请求结果描述，code!=200时应该返回此值</td><td>1.0</td></tr>
@@ -88,16 +88,16 @@
 </table>
 <p><strong>Response-example:</strong></p>
 <pre><code>{
-	&quot;code&quot;:&quot;77616&quot;,
+	&quot;code&quot;:&quot;19713&quot;,
 	&quot;ok&quot;:true,
 	&quot;data&quot;:{
 		&quot;waring&quot;:&quot;You may have used non-display generics.&quot;
 	},
-	&quot;msg&quot;:&quot;x8lbmp&quot;
+	&quot;msg&quot;:&quot;5quhlv&quot;
 }
 </code></pre>
 <h2>add by model</h2>
-<p><strong>URL:</strong> <code>http://localhost:8089/test/add</code></p>
+<p><strong>URL:</strong> <code>http://localhost:8089/demo/add</code></p>
 <p><strong>Type:</strong> <code>POST</code></p>
 <p><strong>Content-Type:</strong> <code>application/json; charset=utf-8</code></p>
 <p><strong>Description:</strong> add by model</p>
@@ -112,7 +112,7 @@
 </tbody>
 </table>
 <p><strong>Request-example:</strong></p>
-<pre><code>curl -X POST -H 'Content-Type: application/json; charset=utf-8'  -i http://localhost:8089/test/add --data '{&quot;name&quot;:&quot;驰.戴&quot;,&quot;nick&quot;:&quot;golqa6&quot;}'
+<pre><code>curl -X POST -H 'Content-Type: application/json; charset=utf-8'  -i http://localhost:8089/demo/add --data '{&quot;name&quot;:&quot;博超.杨&quot;,&quot;nick&quot;:&quot;chrqgf&quot;}'
 </code></pre>
 <p><strong>Response-fields:</strong></p>
 <table>
@@ -120,7 +120,7 @@
 <tr><th>Field</th><th>Type</th><th>Description</th><th>Since</th></tr>
 </thead>
 <tbody>
-<tr><td>code</td><td>string</td><td>error code 200表示成功</td><td>1.0</td></tr>
+<tr><td>code</td><td>string</td><td>code 200 表示成功</td><td>1.0</td></tr>
 <tr><td>ok</td><td>boolean</td><td>请求是否成功true/false</td><td>-</td></tr>
 <tr><td>data</td><td>object</td><td>请求相关数据</td><td>-</td></tr>
 <tr><td>msg</td><td>string</td><td>请求结果描述，code!=200时应该返回此值</td><td>1.0</td></tr>
@@ -128,16 +128,16 @@
 </table>
 <p><strong>Response-example:</strong></p>
 <pre><code>{
-	&quot;code&quot;:&quot;77616&quot;,
+	&quot;code&quot;:&quot;19713&quot;,
 	&quot;ok&quot;:true,
 	&quot;data&quot;:{
 		&quot;waring&quot;:&quot;You may have used non-display generics.&quot;
 	},
-	&quot;msg&quot;:&quot;3ql1il&quot;
+	&quot;msg&quot;:&quot;urv05d&quot;
 }
 </code></pre>
 <h2>update app</h2>
-<p><strong>URL:</strong> <code>http://localhost:8089/test/update</code></p>
+<p><strong>URL:</strong> <code>http://localhost:8089/demo/update</code></p>
 <p><strong>Type:</strong> <code>PUT</code></p>
 <p><strong>Content-Type:</strong> <code>application/json; charset=utf-8</code></p>
 <p><strong>Description:</strong> update app</p>
@@ -153,15 +153,15 @@
 </tbody>
 </table>
 <p><strong>Request-example:</strong></p>
-<pre><code>curl -X PUT -H 'Content-Type: application/json; charset=utf-8'  -i http://localhost:8089/test/update --data '{
+<pre><code>curl -X PUT -H 'Content-Type: application/json; charset=utf-8'  -i http://localhost:8089/demo/update --data '{
 	
 	
-	&quot;id&quot;:&quot;519&quot;
+	&quot;id&quot;:&quot;455&quot;
 ,
 	
-	&quot;appname&quot;:&quot;驰.戴&quot;
+	&quot;appname&quot;:&quot;博超.杨&quot;
 ,
-	&quot;nick&quot;:&quot;als6ae&quot;
+	&quot;nick&quot;:&quot;wed5zq&quot;
 }'
 </code></pre>
 <p><strong>Response-fields:</strong></p>
@@ -170,7 +170,7 @@
 <tr><th>Field</th><th>Type</th><th>Description</th><th>Since</th></tr>
 </thead>
 <tbody>
-<tr><td>code</td><td>string</td><td>error code 200表示成功</td><td>1.0</td></tr>
+<tr><td>code</td><td>string</td><td>code 200 表示成功</td><td>1.0</td></tr>
 <tr><td>ok</td><td>boolean</td><td>请求是否成功true/false</td><td>-</td></tr>
 <tr><td>data</td><td>object</td><td>请求相关数据</td><td>-</td></tr>
 <tr><td>msg</td><td>string</td><td>请求结果描述，code!=200时应该返回此值</td><td>1.0</td></tr>
@@ -178,16 +178,16 @@
 </table>
 <p><strong>Response-example:</strong></p>
 <pre><code>{
-	&quot;code&quot;:&quot;77616&quot;,
+	&quot;code&quot;:&quot;19713&quot;,
 	&quot;ok&quot;:true,
 	&quot;data&quot;:{
 		&quot;waring&quot;:&quot;You may have used non-display generics.&quot;
 	},
-	&quot;msg&quot;:&quot;grhduh&quot;
+	&quot;msg&quot;:&quot;ajjqa6&quot;
 }
 </code></pre>
 <h2>get by appname</h2>
-<p><strong>URL:</strong> <code>http://localhost:8089/test/get/{appname}</code></p>
+<p><strong>URL:</strong> <code>http://localhost:8089/demo/get/{appname}</code></p>
 <p><strong>Type:</strong> <code>ANY</code></p>
 <p><strong>Content-Type:</strong> <code>application/x-www-form-urlencoded;charset=utf-8</code></p>
 <p><strong>Description:</strong> get by appname</p>
@@ -201,7 +201,7 @@
 </tbody>
 </table>
 <p><strong>Request-example:</strong></p>
-<pre><code>curl   -i http://localhost:8089/test/get/驰.戴
+<pre><code>curl   -i http://localhost:8089/demo/get/博超.杨
 </code></pre>
 <p><strong>Response-fields:</strong></p>
 <table>
@@ -209,7 +209,7 @@
 <tr><th>Field</th><th>Type</th><th>Description</th><th>Since</th></tr>
 </thead>
 <tbody>
-<tr><td>code</td><td>string</td><td>error code 200表示成功</td><td>1.0</td></tr>
+<tr><td>code</td><td>string</td><td>code 200 表示成功</td><td>1.0</td></tr>
 <tr><td>ok</td><td>boolean</td><td>请求是否成功true/false</td><td>-</td></tr>
 <tr><td>data</td><td>object</td><td>请求相关数据</td><td>-</td></tr>
 <tr><td>msg</td><td>string</td><td>请求结果描述，code!=200时应该返回此值</td><td>1.0</td></tr>
@@ -217,17 +217,17 @@
 </table>
 <p><strong>Response-example:</strong></p>
 <pre><code>{
-	&quot;code&quot;:&quot;77616&quot;,
+	&quot;code&quot;:&quot;19713&quot;,
 	&quot;ok&quot;:true,
 	&quot;data&quot;:{
 		&quot;waring&quot;:&quot;You may have used non-display generics.&quot;
 	},
-	&quot;msg&quot;:&quot;44vaz5&quot;
+	&quot;msg&quot;:&quot;pc8exa&quot;
 }
 </code></pre>
 
     <footer class="page-footer">
-        <span class="copyright">Generated by smart-doc at 2021-12-08 22:49:38</span>
+        <span class="copyright">Generated by smart-doc at 2021-12-08 23:19:23</span>
         <span class="footer-modification">Suggestions, contact, support and error reporting on
             <a href="https://gitee.com/smart-doc-team/smart-doc" target="_blank">Gitee</a> or
             <a href="https://github.com/smart-doc-group/smart-doc" target="_blank">Github</a>
