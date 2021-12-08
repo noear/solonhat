@@ -12,6 +12,7 @@
 <dependency>
     <groupId>org.noear</groupId>
     <artifactId>solonhat-smartdoc</artifactId>
+    <version>${solonhat.ver}</version>
     <scope>test</scope>
 </dependency>
 ```
