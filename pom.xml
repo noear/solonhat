@@ -6,10 +6,11 @@
 
     <groupId>org.noear</groupId>
     <artifactId>solonhat-root</artifactId>
-    <version>1.0</version>
+    <version>dev</version>
     <packaging>pom</packaging>
 
-    <name>${project.artifactId}</name>
+    <name>_root</name>
+
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
