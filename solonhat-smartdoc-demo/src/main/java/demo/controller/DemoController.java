@@ -13,7 +13,7 @@ import java.util.Map;
  * 测试
  */
 @Controller
-@Mapping("/test")
+@Mapping("/demo")
 public class DemoController{
 
     /**

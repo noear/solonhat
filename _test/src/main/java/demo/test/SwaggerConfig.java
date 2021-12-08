@@ -1,4 +1,4 @@
-package test;
+package demo.test;
 
 import io.swagger.models.Contact;
 import io.swagger.models.Info;

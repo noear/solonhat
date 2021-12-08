@@ -4,14 +4,24 @@
 - 目前版本暂只支持html生成
 
 
-## 引用
-    引用时，scope可设置为test，package时不用打包进去
+## 使用说明
 
-## 使用
-    copy Doc.java到你的项目中的test代码目录，运行 的Doc.testBuilderControllersApi 
+#### 1、引用依赖
+
+```xml
+<dependency>
+    <groupId>org.noear</groupId>
+    <artifactId>solonhat-smartdoc</artifactId>
+    <scope>test</scope>
+</dependency>
+```
+#### 2、创建测试工具类
+
+> copy src/test/java/test/Doc.java 到你的项目中的test代码目录，运行 的 Doc.generate 
     
 ## 输出
-    生成html及css文件
+
+> 生成html及css文件
 
 
 ## 配置

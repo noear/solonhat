@@ -1,4 +1,4 @@
-package test;
+package tool;
 import com.power.common.util.DateTimeUtil;
 import com.power.doc.constants.DocGlobalConstants;
 import com.power.doc.model.ApiConfig;
