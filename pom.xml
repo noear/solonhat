@@ -22,7 +22,7 @@
         <module>solonhat-parent</module>
         <module>_test</module>
 
-        <module>solonhat-smartdoc-test</module>
+        <module>solonhat-smartdoc-demo</module>
     </modules>
 
 </project>

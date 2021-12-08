@@ -11,7 +11,7 @@
         <relativePath>../solonhat-parent/pom.xml</relativePath>
     </parent>
 
-    <artifactId>solonhat-smartdoc-test</artifactId>
+    <artifactId>solonhat-smartdoc-demo</artifactId>
 
     <dependencies>
         <dependency>
