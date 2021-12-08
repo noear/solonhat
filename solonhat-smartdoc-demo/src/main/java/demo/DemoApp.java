@@ -2,9 +2,9 @@ package demo;
 
 import org.noear.solon.Solon;
 
-public class App {
+public class DemoApp {
     public static void main(String[] args) {
-        Solon.start(App.class, args).get("/", c -> {
+        Solon.start(DemoApp.class, args).get("/", c -> {
             c.redirect("/doc/api.htm");
         });
     }
