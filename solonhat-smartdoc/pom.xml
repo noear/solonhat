@@ -13,12 +13,33 @@
 
     <artifactId>solonhat-smartdoc</artifactId>
     <packaging>jar</packaging>
-
+    <description>solon smartdoc adapter</description>
     <dependencies>
         <dependency>
             <groupId>org.noear</groupId>
             <artifactId>solon</artifactId>
             <version>${solon.ver}</version>
+
+        </dependency>
+        <dependency>
+            <groupId>org.noear</groupId>
+            <artifactId>solon-test</artifactId>
+            <version>${solon.ver}</version>
+
+        </dependency>
+        <dependency>
+            <groupId>org.noear</groupId>
+            <artifactId>snack3</artifactId>
+            <version>${snack3.ver}</version>
+        </dependency>
+
+
+
+        <dependency>
+            <groupId>com.github.shalousun</groupId>
+            <artifactId>smart-doc</artifactId>
+            <version>1.9.4</version>
+
         </dependency>
     </dependencies>
 </project>
