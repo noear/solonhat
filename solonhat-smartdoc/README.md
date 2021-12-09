@@ -18,7 +18,7 @@
 ```
 #### 2、创建测试工具类
 
-* [Copy] src/test/java/test/Doc.java 到你的项目中的test代码目录
+* [Copy] src/test/java/tool/Doc.java 到你的项目中的test代码目录
 
 如果有需要，可以做些修改：
 ```java
