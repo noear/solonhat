@@ -4,6 +4,7 @@ package demo.controller;
 import org.noear.solon.annotation.*;
 import demo.model.Model;
 import demo.model.Msg;
+import org.noear.solon.core.handle.Result;
 
 
 import java.util.HashMap;
@@ -23,13 +24,14 @@ public class DemoController{
      */
     @Get
     @Mapping("/hello/{username}")
-    public Msg hello(String username){
+    public Result<Msg> hello(String username){
         Map m=new HashMap();
 
         m.put("uu",username);
         Msg msg=new Msg();
         msg.setData(m);
-        return msg;
+
+        return Result.succeed(msg);
     }
 
     /**
