@@ -99,8 +99,8 @@ public class SolonDocBuildTemplate implements IDocBuildTemplate<ApiDoc> {
         String baseUrl = "";
         for (JavaAnnotation annotation : classAnnotations) {
             String annotationName = annotation.getType().getValue();
-            if (SolonConstants.REQUEST_MAPPING.equals(annotationName) ||
-                    SolonConstants.REQUEST_MAPPING_FULLY.equals(annotationName)) {
+            if (SolonMvcAnnotations.REQUEST_MAPPING.equals(annotationName) ||
+                    SolonMvcAnnotations.REQUEST_MAPPING_FULLY.equals(annotationName)) {
                 if (annotation.getNamedParameter("value") != null) {
                     baseUrl = StringUtil.removeQuotes(annotation.getNamedParameter("value").toString());
                 }
@@ -306,7 +306,7 @@ public class SolonDocBuildTemplate implements IDocBuildTemplate<ApiDoc> {
                         mockValue = mockValue.replace(key, value);
                     }
                 }
-                if (SolonConstants.POST_MAPPING.equals(annotationName) || SolonConstants.POST_MAPPING.equals(annotationName)) {
+                if (SolonMvcAnnotations.POST_MAPPING.equals(annotationName) || SolonMvcAnnotations.POST_MAPPING.equals(annotationName)) {
                     apiMethodDoc.setContentType(JSON_CONTENT_TYPE);
                     if (JavaClassValidateUtil.isPrimitive(simpleTypeName)) {
                         StringBuilder builder = new StringBuilder();
@@ -321,7 +321,7 @@ public class SolonDocBuildTemplate implements IDocBuildTemplate<ApiDoc> {
                         requestExample.setJsonBody(JsonFormatUtil.formatJson(json)).setJson(true);
                     }
                     paramAdded = true;
-                } else if (SolonConstants.GET_MAPPING.contains(annotationName)) {
+                } else if (SolonMvcAnnotations.GET_MAPPING.contains(annotationName)) {
                     if (javaClass.isEnum()) {
                         Object value = JavaClassUtil.getEnumValue(javaClass, Boolean.TRUE);
                         mockValue = StringUtil.removeQuotes(String.valueOf(value));

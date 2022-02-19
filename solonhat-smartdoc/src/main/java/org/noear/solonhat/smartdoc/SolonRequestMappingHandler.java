@@ -69,21 +69,21 @@ public class SolonRequestMappingHandler {
             if (DocAnnotationConstants.DEPRECATED.equals(annotationName)) {
                 deprecated = true;
             }
-            if (SolonConstants.REQUEST_MAPPING.equals(annotationName) || SolonConstants.REQUEST_MAPPING_FULLY.equals(annotationName)) {
+            if (SolonMvcAnnotations.REQUEST_MAPPING.equals(annotationName) || SolonMvcAnnotations.REQUEST_MAPPING_FULLY.equals(annotationName)) {
                 shortUrl = DocUtil.handleMappingValue(annotation);
 
             }
-            if (SolonConstants.GET_MAPPING.equals(annotationName) || SolonConstants.GET_MAPPING_FULLY.equals(annotationName)) {
+            if (SolonMvcAnnotations.GET_MAPPING.equals(annotationName) || SolonMvcAnnotations.GET_MAPPING_FULLY.equals(annotationName)) {
                 methodType = Methods.GET.getValue();
-            } else if (SolonConstants.POST_MAPPING.equals(annotationName) || SolonConstants.POST_MAPPING_FULLY.equals(annotationName)) {
+            } else if (SolonMvcAnnotations.POST_MAPPING.equals(annotationName) || SolonMvcAnnotations.POST_MAPPING_FULLY.equals(annotationName)) {
                 methodType = Methods.POST.getValue();
                 mediaType = "application/json;charset=UTF-8";
-            } else if (SolonConstants.PUT_MAPPING.equals(annotationName) || SolonConstants.PUT_MAPPING_FULLY.equals(annotationName)) {
+            } else if (SolonMvcAnnotations.PUT_MAPPING.equals(annotationName) || SolonMvcAnnotations.PUT_MAPPING_FULLY.equals(annotationName)) {
                 mediaType = "application/json;charset=UTF-8";
                 methodType = Methods.PUT.getValue();
-            } else if (SolonConstants.PATCH_MAPPING.equals(annotationName) || SolonConstants.PATCH_MAPPING_FULLY.equals(annotationName)) {
+            } else if (SolonMvcAnnotations.PATCH_MAPPING.equals(annotationName) || SolonMvcAnnotations.PATCH_MAPPING_FULLY.equals(annotationName)) {
                 methodType = Methods.PATCH.getValue();
-            } else if (SolonConstants.DELETE_MAPPING.equals(annotationName) || SolonConstants.DELETE_MAPPING_FULLY.equals(annotationName)) {
+            } else if (SolonMvcAnnotations.DELETE_MAPPING.equals(annotationName) || SolonMvcAnnotations.DELETE_MAPPING_FULLY.equals(annotationName)) {
                 methodType = Methods.DELETE.getValue();
             }
         }
