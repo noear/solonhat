@@ -99,8 +99,8 @@ public class SolonDocBuildTemplate implements IDocBuildTemplate<ApiDoc> {
         String baseUrl = "";
         for (JavaAnnotation annotation : classAnnotations) {
             String annotationName = annotation.getType().getValue();
-            if (Constants.REQUEST_MAPPING.equals(annotationName) ||
-                    Constants.REQUEST_MAPPING_FULLY.equals(annotationName)) {
+            if (SolonConstants.REQUEST_MAPPING.equals(annotationName) ||
+                    SolonConstants.REQUEST_MAPPING_FULLY.equals(annotationName)) {
                 if (annotation.getNamedParameter("value") != null) {
                     baseUrl = StringUtil.removeQuotes(annotation.getNamedParameter("value").toString());
                 }
@@ -306,7 +306,7 @@ public class SolonDocBuildTemplate implements IDocBuildTemplate<ApiDoc> {
                         mockValue = mockValue.replace(key, value);
                     }
                 }
-                if (Constants.POST_MAPPING.equals(annotationName) ||Constants.POST_MAPPING.equals(annotationName)) {
+                if (SolonConstants.POST_MAPPING.equals(annotationName) || SolonConstants.POST_MAPPING.equals(annotationName)) {
                     apiMethodDoc.setContentType(JSON_CONTENT_TYPE);
                     if (JavaClassValidateUtil.isPrimitive(simpleTypeName)) {
                         StringBuilder builder = new StringBuilder();
@@ -321,7 +321,7 @@ public class SolonDocBuildTemplate implements IDocBuildTemplate<ApiDoc> {
                         requestExample.setJsonBody(JsonFormatUtil.formatJson(json)).setJson(true);
                     }
                     paramAdded = true;
-                } else if (Constants.GET_MAPPING.contains(annotationName)) {
+                } else if (SolonConstants.GET_MAPPING.contains(annotationName)) {
                     if (javaClass.isEnum()) {
                         Object value = JavaClassUtil.getEnumValue(javaClass, Boolean.TRUE);
                         mockValue = StringUtil.removeQuotes(String.valueOf(value));
@@ -625,5 +625,29 @@ public class SolonDocBuildTemplate implements IDocBuildTemplate<ApiDoc> {
             rewriteClassName = replacementMap.get(fullTypeName);
         }
         return rewriteClassName;
+    }
+
+    public static class ChangeBodyFormat {
+
+        public static String urlParamToJson(String p) {
+            if (p == null) {
+                return "";
+            }
+            StringBuffer stringBuffer = new StringBuffer();
+            String[] split = p.split("&");
+            stringBuffer.append("{");
+            boolean b = false;
+            for (String s : split) {
+
+                String[] split1 = s.split("=");
+                stringBuffer.append("\"" + split1[0] + "\":\"" + (split1.length > 1 ? split1[1] : "") + "\",");
+                b = true;
+            }
+            if (b) {
+                stringBuffer.deleteCharAt(stringBuffer.length() - 1);
+            }
+            stringBuffer.append("}");
+            return stringBuffer.toString();
+        }
     }
 }

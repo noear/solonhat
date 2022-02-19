@@ -6,7 +6,7 @@
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
     <meta http-equiv="Pragma" content="no-cache" />
     <meta http-equiv="Expires" content="0" />
-    <link rel="stylesheet" href="markdown.css?v=1638976763799"/>
+    <link rel="stylesheet" href="markdown.css?v=1645276284162"/>
     <title>测试</title>
 </head>
 <body>
@@ -27,7 +27,7 @@
 </tbody>
 </table>
 <p><strong>Request-example:</strong></p>
-<pre><code>curl -X GET  -i http://localhost:8089/demo/hello/博超.杨
+<pre><code>curl -X GET  -i http://localhost:8089/demo/hello/展鹏.谢
 </code></pre>
 <p><strong>Response-fields:</strong></p>
 <table>
@@ -35,20 +35,27 @@
 <tr><th>Field</th><th>Type</th><th>Description</th><th>Since</th></tr>
 </thead>
 <tbody>
-<tr><td>code</td><td>string</td><td>code 200 表示成功</td><td>1.0</td></tr>
-<tr><td>ok</td><td>boolean</td><td>请求是否成功true/false</td><td>-</td></tr>
-<tr><td>data</td><td>object</td><td>请求相关数据</td><td>-</td></tr>
-<tr><td>msg</td><td>string</td><td>请求结果描述，code!=200时应该返回此值</td><td>1.0</td></tr>
+<tr><td>code</td><td>int32</td><td>No comments found.</td><td>-</td></tr>
+<tr><td>description</td><td>string</td><td>No comments found.</td><td>-</td></tr>
+<tr><td>data</td><td>object</td><td>No comments found.</td><td>-</td></tr>
+<tr><td>└─code</td><td>string</td><td>code 200 表示成功</td><td>1.0</td></tr>
+<tr><td>└─ok</td><td>boolean</td><td>请求是否成功true/false</td><td>-</td></tr>
+<tr><td>└─data</td><td>object</td><td>请求相关数据</td><td>-</td></tr>
+<tr><td>└─msg</td><td>string</td><td>请求结果描述，code!=200时应该返回此值</td><td>1.0</td></tr>
 </tbody>
 </table>
 <p><strong>Response-example:</strong></p>
 <pre><code>{
-	&quot;code&quot;:&quot;19713&quot;,
-	&quot;ok&quot;:true,
+	&quot;code&quot;:439,
+	&quot;description&quot;:&quot;rskhhh&quot;,
 	&quot;data&quot;:{
-		&quot;waring&quot;:&quot;You may have used non-display generics.&quot;
-	},
-	&quot;msg&quot;:&quot;jic0xf&quot;
+		&quot;code&quot;:&quot;87852&quot;,
+		&quot;ok&quot;:true,
+		&quot;data&quot;:{
+			&quot;waring&quot;:&quot;You may have used non-display generics.&quot;
+		},
+		&quot;msg&quot;:&quot;rp4dzp&quot;
+	}
 }
 </code></pre>
 <h2>addapp</h2>
@@ -69,9 +76,9 @@
 <p><strong>Request-example:</strong></p>
 <pre><code>curl -X POST -H 'Content-Type: application/json; charset=utf-8'  -i http://localhost:8089/demo/add --data '{
 	
-	&quot;appname&quot;:&quot;博超.杨&quot;
+	&quot;appname&quot;:&quot;展鹏.谢&quot;
 ,
-	&quot;nick&quot;:&quot;el04vy&quot;
+	&quot;nick&quot;:&quot;bpej30&quot;
 }'
 </code></pre>
 <p><strong>Response-fields:</strong></p>
@@ -88,12 +95,12 @@
 </table>
 <p><strong>Response-example:</strong></p>
 <pre><code>{
-	&quot;code&quot;:&quot;19713&quot;,
+	&quot;code&quot;:&quot;87852&quot;,
 	&quot;ok&quot;:true,
 	&quot;data&quot;:{
 		&quot;waring&quot;:&quot;You may have used non-display generics.&quot;
 	},
-	&quot;msg&quot;:&quot;5quhlv&quot;
+	&quot;msg&quot;:&quot;8qpoqj&quot;
 }
 </code></pre>
 <h2>add by model</h2>
@@ -112,7 +119,7 @@
 </tbody>
 </table>
 <p><strong>Request-example:</strong></p>
-<pre><code>curl -X POST -H 'Content-Type: application/json; charset=utf-8'  -i http://localhost:8089/demo/add --data '{&quot;name&quot;:&quot;博超.杨&quot;,&quot;nick&quot;:&quot;chrqgf&quot;}'
+<pre><code>curl -X POST -H 'Content-Type: application/json; charset=utf-8'  -i http://localhost:8089/demo/add --data '{&quot;nick&quot;:&quot;92ekwc&quot;,&quot;name&quot;:&quot;展鹏.谢&quot;}'
 </code></pre>
 <p><strong>Response-fields:</strong></p>
 <table>
@@ -128,12 +135,12 @@
 </table>
 <p><strong>Response-example:</strong></p>
 <pre><code>{
-	&quot;code&quot;:&quot;19713&quot;,
+	&quot;code&quot;:&quot;87852&quot;,
 	&quot;ok&quot;:true,
 	&quot;data&quot;:{
 		&quot;waring&quot;:&quot;You may have used non-display generics.&quot;
 	},
-	&quot;msg&quot;:&quot;urv05d&quot;
+	&quot;msg&quot;:&quot;8qtog3&quot;
 }
 </code></pre>
 <h2>update app</h2>
@@ -156,12 +163,12 @@
 <pre><code>curl -X PUT -H 'Content-Type: application/json; charset=utf-8'  -i http://localhost:8089/demo/update --data '{
 	
 	
-	&quot;id&quot;:&quot;455&quot;
+	&quot;id&quot;:&quot;14&quot;
 ,
 	
-	&quot;appname&quot;:&quot;博超.杨&quot;
+	&quot;appname&quot;:&quot;展鹏.谢&quot;
 ,
-	&quot;nick&quot;:&quot;wed5zq&quot;
+	&quot;nick&quot;:&quot;q917di&quot;
 }'
 </code></pre>
 <p><strong>Response-fields:</strong></p>
@@ -178,12 +185,12 @@
 </table>
 <p><strong>Response-example:</strong></p>
 <pre><code>{
-	&quot;code&quot;:&quot;19713&quot;,
+	&quot;code&quot;:&quot;87852&quot;,
 	&quot;ok&quot;:true,
 	&quot;data&quot;:{
 		&quot;waring&quot;:&quot;You may have used non-display generics.&quot;
 	},
-	&quot;msg&quot;:&quot;ajjqa6&quot;
+	&quot;msg&quot;:&quot;33e4dv&quot;
 }
 </code></pre>
 <h2>get by appname</h2>
@@ -201,7 +208,7 @@
 </tbody>
 </table>
 <p><strong>Request-example:</strong></p>
-<pre><code>curl   -i http://localhost:8089/demo/get/博超.杨
+<pre><code>curl   -i http://localhost:8089/demo/get/展鹏.谢
 </code></pre>
 <p><strong>Response-fields:</strong></p>
 <table>
@@ -217,17 +224,17 @@
 </table>
 <p><strong>Response-example:</strong></p>
 <pre><code>{
-	&quot;code&quot;:&quot;19713&quot;,
+	&quot;code&quot;:&quot;87852&quot;,
 	&quot;ok&quot;:true,
 	&quot;data&quot;:{
 		&quot;waring&quot;:&quot;You may have used non-display generics.&quot;
 	},
-	&quot;msg&quot;:&quot;pc8exa&quot;
+	&quot;msg&quot;:&quot;d9kwhg&quot;
 }
 </code></pre>
 
     <footer class="page-footer">
-        <span class="copyright">Generated by smart-doc at 2021-12-08 23:19:23</span>
+        <span class="copyright">Generated by smart-doc at 2022-02-19 21:11:24</span>
         <span class="footer-modification">Suggestions, contact, support and error reporting on
             <a href="https://gitee.com/smart-doc-team/smart-doc" target="_blank">Gitee</a> or
             <a href="https://github.com/smart-doc-group/smart-doc" target="_blank">Github</a>

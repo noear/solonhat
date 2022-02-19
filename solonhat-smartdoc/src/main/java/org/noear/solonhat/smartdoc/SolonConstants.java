@@ -1,6 +1,6 @@
 package org.noear.solonhat.smartdoc;
 
-public class Constants {
+public class SolonConstants {
 
 
     public static  final String   REQUEST_MAPPING ="Mapping";
