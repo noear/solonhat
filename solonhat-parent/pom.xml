@@ -29,8 +29,6 @@
 
 
     <modules>
-        <module>../solonhat-smartdoc</module>
-
         <module>../solonhat-swagger2</module>
         <module>../solonhat-swagger-ui</module>
         <module>../solonhat-swagger-bootstrap-ui</module>
@@ -39,11 +37,6 @@
 
     <dependencyManagement>
         <dependencies>
-            <dependency>
-                <groupId>org.noear</groupId>
-                <artifactId>solonhat-smartdoc</artifactId>
-                <version>${solonhat.ver}</version>
-            </dependency>
 
             <dependency>
                 <groupId>org.noear</groupId>
