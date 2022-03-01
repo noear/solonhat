@@ -8,4 +8,4 @@
 Solon 的文档适配工程
 
 
-* smart-doc 使用方式参考：http://solon.noear.org/article/169
+* smart-doc 已适配，使用方式参考：http://solon.noear.org/article/169
