@@ -31,6 +31,9 @@
         <module>../solonhat-swagger2</module>
         <module>../solonhat-swagger-ui</module>
         <module>../solonhat-swagger-bootstrap-ui</module>
+
+        <module>../integration/knife4j-solon-plugin</module>
+        <module>../integration/swagger-solon-plugin</module>
     </modules>
 
 
