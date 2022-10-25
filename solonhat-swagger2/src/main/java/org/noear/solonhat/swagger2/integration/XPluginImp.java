@@ -6,10 +6,10 @@ import io.swagger.annotations.ApiParam;
 import io.swagger.models.*;
 import io.swagger.models.parameters.*;
 import org.noear.solon.Solon;
-import org.noear.solon.SolonApp;
 import org.noear.solon.Utils;
 import org.noear.solon.annotation.Controller;
 import org.noear.solon.core.Aop;
+import org.noear.solon.core.AopContext;
 import org.noear.solon.core.Plugin;
 import org.noear.solon.core.handle.*;
 import org.noear.solon.core.route.Routing;
@@ -25,8 +25,8 @@ public class XPluginImp implements Plugin {
     Swagger swagger;
 
     @Override
-    public void start(SolonApp app) {
-        if (app.source().getAnnotation(EnableSwagger2.class) == null) {
+    public void start(AopContext context) {
+        if (Solon.app().source().getAnnotation(EnableSwagger2.class) == null) {
             return;
         }
 
@@ -47,15 +47,15 @@ public class XPluginImp implements Plugin {
         });
 
 
-        app.beanMake(SwaggerController.class);
+        context.beanMake(SwaggerController.class);
 
-        Aop.beanOnloaded(this::onAppLoadEnd);
+        context.beanOnloaded(this::onAppLoadEnd);
 
-        PrintUtil.info("SwaggerApi", "url: http://localhost:" + app.port() + "/v2/swagger.json");
+        PrintUtil.info("SwaggerApi", "url: http://localhost:" + Solon.cfg().serverPort() + "/v2/swagger.json");
     }
 
-    private void onAppLoadEnd() {
-        Info info = Aop.get(Info.class);
+    private void onAppLoadEnd(AopContext context) {
+        Info info = context.getBean(Info.class);
 
         if (info != null) {
             swagger.info(info);
@@ -141,7 +141,7 @@ public class XPluginImp implements Plugin {
 
 
         Operation operation = new Operation();
-        operation.addTag(action.bean().clz().getName());
+        operation.addTag(action.controller().clz().getName());
 
         operation.summary(route.path());
 
